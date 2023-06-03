@@ -8,6 +8,7 @@ let items = ["Do smth", "Do smth", "Do smth"];
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res) {
 
@@ -31,7 +32,7 @@ app.post("/", function(req, res) {
        items.push(item)
 
     res.redirect("/");
-})
+});
 
 app.listen(3000, function() {
 
