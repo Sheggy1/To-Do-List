@@ -21,7 +21,6 @@ app.get("/", function(req, res) {
 
     let day = today.toLocaleDateString("en-US", options) 
 
-t
     res.render('list', { kindOfDay: day , newListItems: items});
 });
 
